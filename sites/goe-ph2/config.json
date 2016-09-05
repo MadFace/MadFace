@@ -1,0 +1,63 @@
+{
+      "myname": "MadFace",
+	"site": "Goettingen PH2 cluster",
+	"host": "goegrid-controller.ph2.physik.uni-goettingen.de",
+	"port": "8113",
+	"admin_port": "10443",
+	"summary_json": "data/goe-ph2/json/summary.json",
+	"capture": "data/goe-ph2/capture",
+	"thumbnail": "data/goe-ph2/thumbnail",
+	"analysis": "data/goe-ph2/analysis",
+	"analysis_image_size": "384x384",
+	"keep_data_days": 30,
+	"debug_mode": 0,
+	"xdisplay": [{
+		"name": "default",
+		"resolution": "1280x1024",
+		"number": "300",
+		"wait_firefox": 60
+		}],
+	"firefox_profile": "firefox_profiles/dbzvej40.default",
+	"parallel_analysis": 2,
+	"mail_client": "nail",
+	"logs": [{ 
+		"name": "Cron log",
+		"file": "data/goe-ph2/log/cron.log"
+		}, {
+		"name": "Firefox log",
+		"file": "data/goe-ph2/log/firefox.log"
+		}, {
+		"name": "Analysis log",
+		"file": "data/goe-ph2/log/analysis.log"
+		}],
+	"visualizers": [{
+		"name": "vhomer",
+		"file": "site/img/vhomer.jpg"
+	    },{
+		"name": "kummer01",
+		"file": "site/img/kummer01.jpg"
+	    },{
+		"name": "homer",
+		"file": "site/img/homer.jpg"
+	    },{
+		"name": "lisa",
+		"file": "site/img/lisa.jpg"
+	    }],
+	"status": [{
+		"name": "Normal",
+		"color": "item-calm",
+		"file": "http://i.ytimg.com/vi/hEJnMQG9ev8/maxresdefault.jpg"
+            },{
+		"name": "Warning",
+		"color": "item-balanced",
+		"file": "http://surbrook.devermore.net/adaptationsmovie/madmax/wez.jpg"
+            },{
+		"name": "Error",
+		"color": "item-energized",
+		"file": "https://shutupandwatchthemovie.files.wordpress.com/2011/03/mad-max-2-humungus.jpg"
+            },{
+		"name": "Critical",
+		"color": "item-assertive",
+		"file": "http://papystreaming.com/fr/files/2013/10/Mad-Max-2.jpg"
+            }]
+}

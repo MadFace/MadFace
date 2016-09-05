@@ -1,0 +1,597 @@
+[{
+	      "name": "Critical Line",
+	      "text": "The most critical servers",
+	      "level": "Critical",
+	      "urls": [
+		{
+		    "name": "Ganglia vhomer",
+		    "file_prefix": "ganglia_vhomer", 
+		    "link": "http://vbart.ph2.physik.uni-goettingen.de/ganglia/?c=ph2-servers&h=vhomer.ph2.physik.uni-goettingen.de&m=load_one&r=hour&s=descending&hc=4&mc=2",
+		    "capture": true,
+		    "services": [{
+			    "name": "libvirtd vhomer"
+			}]
+		},
+		{
+		    "name": "Ganglia vhomer CPU load",
+		    "file_prefix": "ganglia_vhomer_cpu_load", 
+		    "link": "http://vbart.ph2.physik.uni-goettingen.de/ganglia/graph.php?g=cpu_report&z=large&c=ph2-servers&h=vhomer.ph2.physik.uni-goettingen.de&m=load_one&r=hour&s=descending&hc=4&mc=2&st=1443692876",
+		    "capture": true,
+		    "services": [{
+			    "name": "libvirtd vhomer"
+			}]
+		},
+		{
+		    "name": "Nagios homer",
+		    "file_prefix": "nagios_homer", 
+		    "link": "http://homer.ph2.physik.uni-goettingen.de/nagios/cgi-bin/status.cgi?host=homer.ph2.physik.uni-goettingen.de",
+		    "capture": true,
+		    "services": [{
+			    "name": "NFS homer"
+			}]
+
+		},
+		{
+		    "name": "NFS home directory",
+		    "file_prefix": "nagios_NFS_home", 
+		    "link": "http://homer.ph2.physik.uni-goettingen.de/nagios/cgi-bin/extinfo.cgi?type=2&host=homer.ph2.physik.uni-goettingen.de&service=Home+Partition",
+		    "capture": true,
+		    "services": [{
+			    "name": "NFS homer"
+			}]
+
+		},
+		{
+		    "name": "NFS testbeam directory",
+		    "file_prefix": "nagios_NFS_testbeam", 
+		    "link": "http://homer.ph2.physik.uni-goettingen.de/nagios/cgi-bin/extinfo.cgi?type=2&host=homer.ph2.physik.uni-goettingen.de&service=Testbeam+Partition",
+		    "capture": true,
+		    "services": [{
+			    "name": "NFS homer"
+			}]
+
+		},
+		{
+		    "name": "Nagios lisa",
+		    "file_prefix": "nagios_lisa", 
+		    "link": "http://homer.ph2.physik.uni-goettingen.de/nagios/cgi-bin/status.cgi?host=lisa.ph2.physik.uni-goettingen.de",
+		    "capture": true,
+		    "services": [{
+			    "name": "institute web server"
+			}]
+
+		}
+		]
+	}, 
+	{
+		"name": "Error Line",
+		"text": "Critical servers",
+		"level": "Error",
+		"urls": [
+		{
+		    "name": "Ganglia vbart",
+		    "file_prefix": "ganglia_vbart", 
+		     "link": "http://vbart.ph2.physik.uni-goettingen.de/ganglia/?c=ph2-servers&h=vbart.ph2.physik.uni-goettingen.de&m=load_one&r=hour&s=descending&hc=4&mc=2",
+		    "capture": true,
+		    "services": [{
+			    "name": "cups_vbart"
+			}]
+		},
+		{
+		    "name": "Ganglia vbart CPU load",
+		    "file_prefix": "ganglia_vbart_cpu_load", 
+		     "link": "http://vbart.ph2.physik.uni-goettingen.de/ganglia/graph.php?g=cpu_report&z=large&c=ph2-servers&h=vbart.ph2.physik.uni-goettingen.de&m=load_one&r=hour&s=descending&hc=4&mc=2&st=1443693192",
+		    "capture": true,
+		    "services": [{
+			    "name": "cups_vbart"
+			}]
+		},
+		{
+		    "name": "Ganglia bart",
+		    "file_prefix": "ganglia_bart", 
+		     "link": "http://vbart.ph2.physik.uni-goettingen.de/ganglia/?c=ph2-servers&h=bart.ph2.physik.uni-goettingen.de&m=load_one&r=hour&s=descending&hc=4&mc=2",
+		    "capture": true,
+		    "services": [{
+			    "name": "cups_bart"
+			}]
+		},
+		{
+		    "name": "Ganglia bart CPU load",
+		    "file_prefix": "ganglia_bart_cpu_load", 
+		     "link": "http://vbart.ph2.physik.uni-goettingen.de/ganglia/graph.php?g=cpu_report&z=large&c=ph2-servers&h=bart.ph2.physik.uni-goettingen.de&m=load_one&r=hour&s=descending&hc=4&mc=2&st=1443693192",
+		    "capture": true,
+		    "services": [{
+			    "name": "cups_bart"
+			}]
+		}]
+	},
+
+
+	{
+		"name": "Warning Line",
+		"text": "Need to check them",
+		"level": "Warning",
+		"urls": [
+		{
+			"name": "Ganglia pcatlas01",
+	    		"file_prefix": "ganglia_pcatlas01", 
+	     		"link": "http://vbart.ph2.physik.uni-goettingen.de/ganglia/?p=2&c=ph2-servers&h=pcatlas01.ph2.physik.uni-goettingen.de",
+	    		"capture": true,
+	    		"services": [{
+		    		"name": "autofs_pcatlas01"
+				}]
+		}, 
+		{
+			"name": "Ganglia pcatlas02",
+	    		"file_prefix": "ganglia_pcatlas02", 
+	     		"link": "http://vbart.ph2.physik.uni-goettingen.de/ganglia/?p=2&c=ph2-servers&h=pcatlas02.ph2.physik.uni-goettingen.de",
+	    		"capture": true,
+	    		"services": [{
+		    		"name": "autofs_pcatlas02"
+				}]
+		},
+		{
+			"name": "Ganglia pcatlas03",
+	    		"file_prefix": "ganglia_pcatlas03", 
+	     		"link": "http://vbart.ph2.physik.uni-goettingen.de/ganglia/?p=2&c=ph2-servers&h=pcatlas03.ph2.physik.uni-goettingen.de",
+	    		"capture": true,
+	    		"services": [{
+		    		"name": "autofs_pcatlas03"
+				}]
+		}, 
+		{
+			"name": "Ganglia pcatlas04",
+	    		"file_prefix": "ganglia_pcatlas04", 
+	     		"link": "http://vbart.ph2.physik.uni-goettingen.de/ganglia/?p=2&c=ph2-servers&h=pcatlas04.ph2.physik.uni-goettingen.de",
+	    		"capture": true,
+	    		"services": [{
+		    		"name": "autofs_pcatlas04"
+				}]
+		},
+		{
+			"name": "Ganglia pcatlas05",
+	    		"file_prefix": "ganglia_pcatlas05", 
+	     		"link": "http://vbart.ph2.physik.uni-goettingen.de/ganglia/?p=2&c=ph2-servers&h=pcatlas05.ph2.physik.uni-goettingen.de",
+	    		"capture": true,
+	    		"services": [{
+		    		"name": "autofs_pcatlas05"
+				}]
+		}, 
+		{
+			"name": "Ganglia pcatlas06",
+	    		"file_prefix": "ganglia_pcatlas06", 
+	     		"link": "http://vbart.ph2.physik.uni-goettingen.de/ganglia/?p=2&c=ph2-servers&h=pcatlas06.ph2.physik.uni-goettingen.de",
+	    		"capture": true,
+	    		"services": [{
+		    		"name": "autofs_pcatlas06"
+				}]
+		},
+		{
+			"name": "Ganglia pcatlas07",
+	    		"file_prefix": "ganglia_pcatlas07", 
+	     		"link": "http://vbart.ph2.physik.uni-goettingen.de/ganglia/?p=2&c=ph2-servers&h=pcatlas07.ph2.physik.uni-goettingen.de",
+	    		"capture": true,
+	    		"services": [{
+		    		"name": "autofs_pcatlas07"
+				}]
+		}, 
+		{
+			"name": "Ganglia pcatlas08",
+	    		"file_prefix": "ganglia_pcatlas08", 
+	     		"link": "http://vbart.ph2.physik.uni-goettingen.de/ganglia/?p=2&c=ph2-servers&h=pcatlas08.ph2.physik.uni-goettingen.de",
+	    		"capture": true,
+	    		"services": [{
+		    		"name": "autofs_pcatlas08"
+				}]
+		},
+		{
+			"name": "Ganglia pcatlas09",
+	    		"file_prefix": "ganglia_pcatlas09", 
+	     		"link": "http://vbart.ph2.physik.uni-goettingen.de/ganglia/?p=2&c=ph2-servers&h=pcatlas09.ph2.physik.uni-goettingen.de",
+	    		"capture": true,
+	    		"services": [{
+		    		"name": "autofs_pcatlas09"
+				}]
+		}, 
+		{
+			"name": "Ganglia pcatlas10",
+	    		"file_prefix": "ganglia_pcatlas10", 
+	     		"link": "http://vbart.ph2.physik.uni-goettingen.de/ganglia/?p=2&c=ph2-servers&h=pcatlas10.ph2.physik.uni-goettingen.de",
+	    		"capture": true,
+	    		"services": [{
+		    		"name": "autofs_pcatlas10"
+				}]
+		},
+		{
+			"name": "Ganglia pcatlas11",
+	    		"file_prefix": "ganglia_pcatlas11", 
+	     		"link": "http://vbart.ph2.physik.uni-goettingen.de/ganglia/?p=2&c=ph2-servers&h=pcatlas11.ph2.physik.uni-goettingen.de",
+	    		"capture": true,
+	    		"services": [{
+		    		"name": "autofs_pcatlas11"
+				}]
+		}, 
+		{
+			"name": "Ganglia pcatlas12",
+	    		"file_prefix": "ganglia_pcatlas12", 
+	     		"link": "http://vbart.ph2.physik.uni-goettingen.de/ganglia/?p=2&c=ph2-servers&h=pcatlas12.ph2.physik.uni-goettingen.de",
+	    		"capture": true,
+	    		"services": [{
+		    		"name": "autofs_pcatlas12"
+				}]
+		},
+		{
+			"name": "Ganglia pcatlas13",
+	    		"file_prefix": "ganglia_pcatlas13", 
+	     		"link": "http://vbart.ph2.physik.uni-goettingen.de/ganglia/?p=2&c=ph2-servers&h=pcatlas13.ph2.physik.uni-goettingen.de",
+	    		"capture": true,
+	    		"services": [{
+		    		"name": "autofs_pcatlas13"
+				}]
+		}, 
+		{
+			"name": "Ganglia pcatlas14",
+	    		"file_prefix": "ganglia_pcatlas14", 
+	     		"link": "http://vbart.ph2.physik.uni-goettingen.de/ganglia/?p=2&c=ph2-servers&h=pcatlas14.ph2.physik.uni-goettingen.de",
+	    		"capture": true,
+	    		"services": [{
+		    		"name": "autofs_pcatlas14"
+				}]
+		},
+		{
+			"name": "Ganglia pcatlas15",
+	    		"file_prefix": "ganglia_pcatlas15", 
+	     		"link": "http://vbart.ph2.physik.uni-goettingen.de/ganglia/?p=2&c=ph2-servers&h=pcatlas15.ph2.physik.uni-goettingen.de",
+	    		"capture": true,
+	    		"services": [{
+		    		"name": "autofs_pcatlas15"
+				}]
+		}, 
+		{
+			"name": "Ganglia pcatlas16",
+	    		"file_prefix": "ganglia_pcatlas16", 
+	     		"link": "http://vbart.ph2.physik.uni-goettingen.de/ganglia/?p=2&c=ph2-servers&h=pcatlas16.ph2.physik.uni-goettingen.de",
+	    		"capture": true,
+	    		"services": [{
+		    		"name": "autofs_pcatlas16"
+				}]
+		},
+		{
+			"name": "Ganglia pcatlas17",
+	    		"file_prefix": "ganglia_pcatlas17", 
+	     		"link": "http://vbart.ph2.physik.uni-goettingen.de/ganglia/?p=2&c=ph2-servers&h=pcatlas17.ph2.physik.uni-goettingen.de",
+	    		"capture": true,
+	    		"services": [{
+		    		"name": "autofs_pcatlas17"
+				}]
+		}, 
+		{
+			"name": "Ganglia pcatlas18",
+	    		"file_prefix": "ganglia_pcatlas18", 
+	     		"link": "http://vbart.ph2.physik.uni-goettingen.de/ganglia/?p=2&c=ph2-servers&h=pcatlas18.ph2.physik.uni-goettingen.de",
+	    		"capture": true,
+	    		"services": [{
+		    		"name": "autofs_pcatlas18"
+				}]
+		},
+		{
+			"name": "Ganglia pcatlas19",
+	    		"file_prefix": "ganglia_pcatlas19", 
+	     		"link": "http://vbart.ph2.physik.uni-goettingen.de/ganglia/?p=2&c=ph2-servers&h=pcatlas19.ph2.physik.uni-goettingen.de",
+	    		"capture": true,
+	    		"services": [{
+		    		"name": "autofs_pcatlas19"
+				}]
+		}, 
+		{
+			"name": "Ganglia pcatlas20",
+	    		"file_prefix": "ganglia_pcatlas20", 
+	     		"link": "http://vbart.ph2.physik.uni-goettingen.de/ganglia/?p=2&c=ph2-servers&h=pcatlas20.ph2.physik.uni-goettingen.de",
+	    		"capture": true,
+	    		"services": [{
+		    		"name": "autofs_pcatlas20"
+				}]
+		},
+		{
+			"name": "Ganglia pcatlas21",
+	    		"file_prefix": "ganglia_pcatlas21", 
+	     		"link": "http://vbart.ph2.physik.uni-goettingen.de/ganglia/?p=2&c=ph2-servers&h=pcatlas21.ph2.physik.uni-goettingen.de",
+	    		"capture": true,
+	    		"services": [{
+		    		"name": "autofs_pcatlas21"
+				}]
+		}, 
+		{
+			"name": "Ganglia pcatlas22",
+	    		"file_prefix": "ganglia_pcatlas22", 
+	     		"link": "http://vbart.ph2.physik.uni-goettingen.de/ganglia/?p=2&c=ph2-servers&h=pcatlas22.ph2.physik.uni-goettingen.de",
+	    		"capture": true,
+	    		"services": [{
+		    		"name": "autofs_pcatlas22"
+				}]
+		},
+		{
+			"name": "Ganglia pcatlas23",
+	    		"file_prefix": "ganglia_pcatlas23", 
+	     		"link": "http://vbart.ph2.physik.uni-goettingen.de/ganglia/?p=2&c=ph2-servers&h=pcatlas23.ph2.physik.uni-goettingen.de",
+	    		"capture": true,
+	    		"services": [{
+		    		"name": "autofs_pcatlas23"
+				}]
+		}, 
+		{
+			"name": "Ganglia pcatlas24",
+	    		"file_prefix": "ganglia_pcatlas24", 
+	     		"link": "http://vbart.ph2.physik.uni-goettingen.de/ganglia/?p=2&c=ph2-servers&h=pcatlas24.ph2.physik.uni-goettingen.de",
+	    		"capture": true,
+	    		"services": [{
+		    		"name": "autofs_pcatlas24"
+				}]
+		},
+		{
+			"name": "Ganglia pcatlas25",
+	    		"file_prefix": "ganglia_pcatlas25", 
+	     		"link": "http://vbart.ph2.physik.uni-goettingen.de/ganglia/?p=2&c=ph2-servers&h=pcatlas25.ph2.physik.uni-goettingen.de",
+	    		"capture": true,
+	    		"services": [{
+		    		"name": "autofs_pcatlas25"
+				}]
+		}, 
+		{
+			"name": "Ganglia pcatlas26",
+	    		"file_prefix": "ganglia_pcatlas26", 
+	     		"link": "http://vbart.ph2.physik.uni-goettingen.de/ganglia/?p=2&c=ph2-servers&h=pcatlas26.ph2.physik.uni-goettingen.de",
+	    		"capture": true,
+	    		"services": [{
+		    		"name": "autofs_pcatlas26"
+				}]
+		},
+		{
+			"name": "Ganglia pcatlas27",
+	    		"file_prefix": "ganglia_pcatlas27", 
+	     		"link": "http://vbart.ph2.physik.uni-goettingen.de/ganglia/?p=2&c=ph2-servers&h=pcatlas27.ph2.physik.uni-goettingen.de",
+	    		"capture": true,
+	    		"services": [{
+		    		"name": "autofs_pcatlas27"
+				}]
+		}, 
+		{
+			"name": "Ganglia pcatlas28",
+	    		"file_prefix": "ganglia_pcatlas28", 
+	     		"link": "http://vbart.ph2.physik.uni-goettingen.de/ganglia/?p=2&c=ph2-servers&h=pcatlas28.ph2.physik.uni-goettingen.de",
+	    		"capture": true,
+	    		"services": [{
+		    		"name": "autofs_pcatlas28"
+				}]
+		},
+		{
+			"name": "Ganglia pcatlas29",
+	    		"file_prefix": "ganglia_pcatlas29", 
+	     		"link": "http://vbart.ph2.physik.uni-goettingen.de/ganglia/?p=2&c=ph2-servers&h=pcatlas29.ph2.physik.uni-goettingen.de",
+	    		"capture": true,
+	    		"services": [{
+		    		"name": "autofs_pcatlas29"
+				}]
+		}, 
+		{
+			"name": "Ganglia pcatlas30",
+	    		"file_prefix": "ganglia_pcatlas30", 
+	     		"link": "http://vbart.ph2.physik.uni-goettingen.de/ganglia/?p=2&c=ph2-servers&h=pcatlas30.ph2.physik.uni-goettingen.de",
+	    		"capture": true,
+	    		"services": [{
+		    		"name": "autofs_pcatlas30"
+				}]
+		},
+		{
+			"name": "Ganglia pcatlas31",
+	    		"file_prefix": "ganglia_pcatlas31", 
+	     		"link": "http://vbart.ph2.physik.uni-goettingen.de/ganglia/?p=2&c=ph2-servers&h=pcatlas31.ph2.physik.uni-goettingen.de",
+	    		"capture": true,
+	    		"services": [{
+		    		"name": "autofs_pcatlas31"
+				}]
+		}, 
+		{
+			"name": "Ganglia pcatlas32",
+	    		"file_prefix": "ganglia_pcatlas32", 
+	     		"link": "http://vbart.ph2.physik.uni-goettingen.de/ganglia/?p=2&c=ph2-servers&h=pcatlas32.ph2.physik.uni-goettingen.de",
+	    		"capture": true,
+	    		"services": [{
+		    		"name": "autofs_pcatlas32"
+				}]
+		},
+		{
+			"name": "Ganglia pcatlas33",
+	    		"file_prefix": "ganglia_pcatlas33", 
+	     		"link": "http://vbart.ph2.physik.uni-goettingen.de/ganglia/?p=2&c=ph2-servers&h=pcatlas33.ph2.physik.uni-goettingen.de",
+	    		"capture": true,
+	    		"services": [{
+		    		"name": "autofs_pcatlas33"
+				}]
+		}, 
+		{
+			"name": "Ganglia pcatlas34",
+	    		"file_prefix": "ganglia_pcatlas34", 
+	     		"link": "http://vbart.ph2.physik.uni-goettingen.de/ganglia/?p=2&c=ph2-servers&h=pcatlas34.ph2.physik.uni-goettingen.de",
+	    		"capture": true,
+	    		"services": [{
+		    		"name": "autofs_pcatlas34"
+				}]
+		},
+		{
+			"name": "Ganglia pcatlas35",
+	    		"file_prefix": "ganglia_pcatlas35", 
+	     		"link": "http://vbart.ph2.physik.uni-goettingen.de/ganglia/?p=2&c=ph2-servers&h=pcatlas35.ph2.physik.uni-goettingen.de",
+	    		"capture": true,
+	    		"services": [{
+		    		"name": "autofs_pcatlas35"
+				}]
+		}, 
+		{
+			"name": "Ganglia pcatlas36",
+	    		"file_prefix": "ganglia_pcatlas36", 
+	     		"link": "http://vbart.ph2.physik.uni-goettingen.de/ganglia/?p=2&c=ph2-servers&h=pcatlas36.ph2.physik.uni-goettingen.de",
+	    		"capture": true,
+	    		"services": [{
+		    		"name": "autofs_pcatlas36"
+				}]
+		},
+		{
+			"name": "Ganglia pcatlas37",
+	    		"file_prefix": "ganglia_pcatlas37", 
+	     		"link": "http://vbart.ph2.physik.uni-goettingen.de/ganglia/?p=2&c=ph2-servers&h=pcatlas37.ph2.physik.uni-goettingen.de",
+	    		"capture": true,
+	    		"services": [{
+		    		"name": "autofs_pcatlas37"
+				}]
+		}, 
+		{
+			"name": "Ganglia pcatlas38",
+	    		"file_prefix": "ganglia_pcatlas38", 
+	     		"link": "http://vbart.ph2.physik.uni-goettingen.de/ganglia/?p=2&c=ph2-servers&h=pcatlas38.ph2.physik.uni-goettingen.de",
+	    		"capture": true,
+	    		"services": [{
+		    		"name": "autofs_pcatlas38"
+				}]
+		},
+		{
+			"name": "Ganglia pcatlas39",
+	    		"file_prefix": "ganglia_pcatlas39", 
+	     		"link": "http://vbart.ph2.physik.uni-goettingen.de/ganglia/?p=2&c=ph2-servers&h=pcatlas39.ph2.physik.uni-goettingen.de",
+	    		"capture": true,
+	    		"services": [{
+		    		"name": "autofs_pcatlas39"
+				}]
+		}, 
+		{
+			"name": "Ganglia pcatlas40",
+	    		"file_prefix": "ganglia_pcatlas40", 
+	     		"link": "http://vbart.ph2.physik.uni-goettingen.de/ganglia/?p=2&c=ph2-servers&h=pcatlas10.ph2.physik.uni-goettingen.de",
+	    		"capture": true,
+	    		"services": [{
+		    		"name": "autofs_pcatlas10"
+				}]
+		},
+		{
+			"name": "Ganglia pcatlas41",
+	    		"file_prefix": "ganglia_pcatlas41", 
+	     		"link": "http://vbart.ph2.physik.uni-goettingen.de/ganglia/?p=2&c=ph2-servers&h=pcatlas41.ph2.physik.uni-goettingen.de",
+	    		"capture": true,
+	    		"services": [{
+		    		"name": "autofs_pcatlas41"
+				}]
+		}, 
+		{
+			"name": "Ganglia pcatlas42",
+	    		"file_prefix": "ganglia_pcatlas42", 
+	     		"link": "http://vbart.ph2.physik.uni-goettingen.de/ganglia/?p=2&c=ph2-servers&h=pcatlas42.ph2.physik.uni-goettingen.de",
+	    		"capture": true,
+	    		"services": [{
+		    		"name": "autofs_pcatlas42"
+				}]
+		},
+		{
+			"name": "Ganglia pcatlas43",
+	    		"file_prefix": "ganglia_pcatlas43", 
+	     		"link": "http://vbart.ph2.physik.uni-goettingen.de/ganglia/?p=2&c=ph2-servers&h=pcatlas43.ph2.physik.uni-goettingen.de",
+	    		"capture": true,
+	    		"services": [{
+		    		"name": "autofs_pcatlas43"
+				}]
+		}, 
+		{
+			"name": "Ganglia pcatlas44",
+	    		"file_prefix": "ganglia_pcatlas44", 
+	     		"link": "http://vbart.ph2.physik.uni-goettingen.de/ganglia/?p=2&c=ph2-servers&h=pcatlas44.ph2.physik.uni-goettingen.de",
+	    		"capture": true,
+	    		"services": [{
+		    		"name": "autofs_pcatlas44"
+				}]
+		},
+		{
+			"name": "Ganglia pcatlas45",
+	    		"file_prefix": "ganglia_pcatlas45", 
+	     		"link": "http://vbart.ph2.physik.uni-goettingen.de/ganglia/?p=2&c=ph2-servers&h=pcatlas45.ph2.physik.uni-goettingen.de",
+	    		"capture": true,
+	    		"services": [{
+		    		"name": "autofs_pcatlas45"
+				}]
+		}, 
+		{
+			"name": "Ganglia pcatlas46",
+	    		"file_prefix": "ganglia_pcatlas46", 
+	     		"link": "http://vbart.ph2.physik.uni-goettingen.de/ganglia/?p=2&c=ph2-servers&h=pcatlas46.ph2.physik.uni-goettingen.de",
+	    		"capture": true,
+	    		"services": [{
+		    		"name": "autofs_pcatlas46"
+				}]
+		},
+		{
+			"name": "Ganglia pcatlas47",
+	    		"file_prefix": "ganglia_pcatlas47", 
+	     		"link": "http://vbart.ph2.physik.uni-goettingen.de/ganglia/?p=2&c=ph2-servers&h=pcatlas47.ph2.physik.uni-goettingen.de",
+	    		"capture": true,
+	    		"services": [{
+		    		"name": "autofs_pcatlas47"
+				}]
+		}, 
+		{
+			"name": "Ganglia pcatlas48",
+	    		"file_prefix": "ganglia_pcatlas48", 
+	     		"link": "http://vbart.ph2.physik.uni-goettingen.de/ganglia/?p=2&c=ph2-servers&h=pcatlas48.ph2.physik.uni-goettingen.de",
+	    		"capture": true,
+	    		"services": [{
+		    		"name": "autofs_pcatlas48"
+				}]
+		},
+		{
+			"name": "Ganglia pcatlas49",
+	    		"file_prefix": "ganglia_pcatlas49", 
+	     		"link": "http://vbart.ph2.physik.uni-goettingen.de/ganglia/?p=2&c=ph2-servers&h=pcatlas49.ph2.physik.uni-goettingen.de",
+	    		"capture": true,
+	    		"services": [{
+		    		"name": "autofs_pcatlas49"
+				}]
+		},
+		{
+			"name": "Ganglia goegrid-controller",
+	    		"file_prefix": "ganglia_goegrid_controller", 
+	     		"link": "http://localhost/ganglia/?r=2hr&cs=&ce=&m=load_one&c=unspecified&h=localhost&tab=m&vn=&hide-hf=false&mc=2&z=medium&metric_group=ALLGROUPS",
+	    		"capture": true,
+	    		"services": [{
+		    		"name": "madface watcher"
+				}]
+		}
+		]
+	},
+
+
+	{
+		"name": "Admin interface",
+		"text": "",
+		"level": null,
+		"urls": [{
+				"name": "vhomer web page",
+	    			"file_prefix": null, 
+	     			"link": "http://vhomer.ph2.physik.uni-goettingen.de",
+	    			"capture": false,
+	    			"services": []
+			},
+			{
+				"name": "vbart web page",
+	    			"file_prefix": null, 
+	     			"link": "http://vbart.ph2.physik.uni-goettingen.de",
+	    			"capture": false,
+	    			"services": []
+			},
+			{
+				"name": "bart web page",
+	    			"file_prefix": null, 
+	     			"link": "http://bart.ph2.physik.uni-goettingen.de",
+	    			"capture": false,
+	    			"services": []
+			}
+			]
+	}
+
+]

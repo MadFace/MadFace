@@ -1,0 +1,22 @@
+[{
+	"region": "Germany",
+	"name": "GoeGrid",
+	"type": "MadFace",
+	"host": "goegrid-controller.ph2.physik.uni-goettingen.de",
+	"port": "8111",
+	"dir": "sites/goegrid"
+	},{
+	"region": "World",
+	"name": "World-wide ATLAS Computing",
+	"type": "MadFace",
+	"host": "goegrid-controller.ph2.physik.uni-goettingen.de",
+	"port": "8112",
+	"dir": "sites/adcos"
+	},{
+	"region": "Germany",
+	"name": "Goettingen PH2 cluster",
+	"type": "MadFace",
+	"host": "goegrid-controller.ph2.physik.uni-goettingen.de",
+	"port": "8113",
+	"dir": "sites/goe-ph2"
+}]

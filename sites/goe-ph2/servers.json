@@ -1,0 +1,96 @@
+[
+  {
+    "name": "vhomer",
+    "text": "Main blade server & virtual machine provider",
+    "img": "img/dell-server.png",
+    "services": [{
+	  "name": "Restart all dCache services",
+	  "command": "ssh se10 'service dcache restart'"
+	  }, {
+	  "name": "Restart dCache Pool service",
+	  "command": "ssh se10 'service dcache restart se10-goegridDomain'"
+	  }, {
+	  "name": "Restart dCache dCap service",
+	  "command": "ssh se10 'service dcache restart dcap-se10-goegridDomain'"
+	  }
+	]
+  }, {
+    "name": "kummer01",
+    "text": "Virtual machine provider",
+    "img": "img/dell-server.png",
+    "services": [{
+	  "name": "Restart libvirtd",
+	  "command": "ssh virt4 'service libvirtd restart'"
+	  }
+	]
+  }, {
+    "name": "homer",
+    "text": "Virtual machine provider",
+    "img": "img/dell-server.png",
+    "services": [{
+	  "name": "Restart libvirtd",
+	  "command": "ssh virt4 'service libvirtd restart'"
+	  }
+	]
+  }, {
+    "name": "bart",
+    "text": "Virtual machine provider",
+    "img": "img/dell-server.png",
+    "services": [{
+	  "name": "Restart libvirtd",
+	  "command": "ssh virt4 'service libvirtd restart'"
+	  }
+	]
+  }, {
+    "name": "vbart",
+    "text": "Virtual machine provider",
+    "img": "img/dell-server.png",
+    "services": [{
+	  "name": "Restart libvirtd",
+	  "command": "ssh virt4 'service libvirtd restart'"
+	  }
+	]
+  }, {
+    "name": "lisa",
+    "text": "Virtual machine provider",
+    "img": "img/dell-server.png",
+    "services": [{
+	  "name": "Restart libvirtd",
+	  "command": "ssh virt4 'service libvirtd restart'"
+	  }
+	]
+  }, {
+    "name": "login",
+    "text": "Virtual machine provider",
+    "img": "img/dell-server.png",
+    "services": [{
+	  "name": "Restart libvirtd",
+	  "command": "ssh virt4 'service libvirtd restart'"
+	  }
+	]
+  }, {
+    "name": "login2",
+    "text": "Virtual machine provider",
+    "img": "img/dell-server.png",
+    "services": [{
+	  "name": "Restart libvirtd",
+	  "command": "ssh virt4 'service libvirtd restart'"
+	  }
+	]
+  }, {
+    "name": "pcatlas01",
+    "text": "pcatlas01 for ATLAS",
+    "img": "img/se.png",
+    "services": [{
+	  "name": "Restart all dCache services",
+	  "command": "ssh se10 'service dcache restart'"
+	  }, {
+	  "name": "Restart dCache Pool service",
+	  "command": "ssh se10 'service dcache restart se10-goegridDomain'"
+	  }, {
+	  "name": "Restart dCache dCap service",
+	  "command": "ssh se10 'service dcache restart dcap-se10-goegridDomain'"
+	  }
+	]
+  }
+]

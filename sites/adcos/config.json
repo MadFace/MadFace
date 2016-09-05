@@ -1,0 +1,92 @@
+{
+      "myname": "MadFace",
+	"site": "World wide Atlas Distributed Computing System",
+	"host": "goegrid-controller.ph2.physik.uni-goettingen.de",
+	"port": "8112",
+	"admin_port": "10443",
+	"summary_json": "data/adcos/json/summary.json",
+	"capture": "data/adcos/capture",
+	"thumbnail": "data/adcos/thumbnail",
+	"analysis": "data/adcos/analysis",
+	"analysis_image_size": "384x384",
+	"keep_data_days": 30,
+	"debug_mode": 0,
+	"xdisplay": [{
+		"name": "default",
+		"resolution": "1600x1600",
+		"number": "201",
+		"wait_firefox": 120
+		}, {
+		"name": "large",
+		"resolution": "1800x3840",
+		"number": "202",
+		"wait_firefox": 70
+		}],
+	"firefox_profile": "firefox_profiles/dbzvej40.default",
+	"parallel_analysis": 4,
+	"mail_client": "nail",
+	"logs": [{ 
+		"name": "Cron log",
+		"file": "data/adcos/log/cron.log"
+		}, {
+		"name": "Firefox log",
+		"file": "data/adcos/log/firefox.log"
+		}, {
+		"name": "Analysis log",
+		"file": "data/adcos/log/analysis.log"
+		}],
+	"visualizers": [{
+		"name": "The Computing centre",
+		"file": "http://atlas.cern/sites/atlas-public.web.cern.ch/files/computing-header.jpg"
+	    },{
+		"name": "Worldwide ATLAS Grid Jobs",
+		"file": "http://dashb-atlas-job.cern.ch/dashboard/request.py/jobnumbers_individual?sites=All%20Sites&sitesCat=All%20Countries&resourcetype=All&sitesSort=0&sitesCatSort=0&start=null&end=null&timeRange=last48&granularity=Hourly&generic=0&sortBy=12&series=All&type=t"
+	    },{
+		"name": "Worldwide ATLAS Grid Jobs - Pie Chart",
+		"file": "http://dashb-atlas-job.cern.ch/dashboard/request.py/jobnumbers_individual?sites=All%20Sites&sitesCat=All%20Countries&resourcetype=All&sitesSort=0&sitesCatSort=0&start=null&end=null&timeRange=last48&granularity=Hourly&generic=0&sortBy=12&series=All&type=tp"
+
+	    },{
+		"name": "ATLAS Live Physics Event",
+		"file": "http://atlas-live.cern.ch/live.png"
+	    },{
+		"name": "LHC Dashboard",
+		"file": "https://lhcdashboard-images.web.cern.ch/lhcdashboard-images/images/lhc/prod/dashboard.png"
+	    },{
+		"name": "LHC Status 1",
+		"file": "http://vistar-capture.web.cern.ch/vistar-capture/lhc1.png"
+	    },{
+		"name": "LHC Beam Dump",
+		"file": "https://vistar-capture.web.cern.ch/vistar-capture/lhcbds.png"
+	    },{
+		"name": "LHC Luminosity",
+		"file": "https://vistar-capture.web.cern.ch/vistar-capture/lhclumi.png"
+	    },{
+		"name": "LHC Exp Magnets",
+		"file": "https://vistar-capture.web.cern.ch/vistar-capture/lhcexpmag.png"
+	    }],
+	"status": [{
+		"name": "Normal",
+		"color": "item-calm",
+		"file": "http://i.ytimg.com/vi/hEJnMQG9ev8/maxresdefault.jpg"
+            },{
+		"name": "Notification",
+		"color": "item-calm",
+		"file": "https://mysterybabalon.files.wordpress.com/2011/07/madmax2.jpg?w=284&h=196"
+            },{
+		"name": "Validation",
+		"color": "item-balanced",
+		"file": "http://images.techtimes.com/data/images/full/65853/mad-max-desert-drifter.jpg?w=600"
+            },{
+		"name": "Warning",
+		"color": "item-balanced",
+		"file": "http://surbrook.devermore.net/adaptationsmovie/madmax/wez.jpg"
+            },{
+		"name": "Error",
+		"color": "item-energized",
+		"file": "https://shutupandwatchthemovie.files.wordpress.com/2011/03/mad-max-2-humungus.jpg"
+            },{
+		"name": "Critical",
+		"color": "item-assertive",
+		"file": "http://papystreaming.com/fr/files/2013/10/Mad-Max-2.jpg"
+            }]
+}
