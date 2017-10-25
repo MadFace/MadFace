@@ -4,88 +4,6 @@
 	      "level": "Critical",
 	      "urls": [
 		{
-		    "name": "Gstat",
-		    "file_prefix": "GStat", 
-		    "link": "http://gstat2.grid.sinica.edu.tw/gstat/site/GoeGrid/",
-		    "xdisplay_name": "middle",
-		    "capture": true,
-		    "services": [{
-			    "name": "BDII"
-			}]
-		},
-		{
-		    "name": "NGI DE Nagios BDII",
-		    "file_prefix": "NGIDE_Nagios_BDII", 
-		     "link": "https://ngi-de-nagios.gridka.de/nagios/cgi-bin/status.cgi?host=bdii.goegrid.gwdg.de",
-		    "capture": true,
-		    "services": [{
-			    "name": "BDII"
-			}]
-		},
-		{
-		    "name": "NGI DE Nagios SE",
-		    "file_prefix": "NGIDE_Nagios_SE", 
-		     "link": "https://ngi-de-nagios.gridka.de/nagios/cgi-bin/status.cgi?host=se-goegrid.gwdg.de",
-		    "capture": true,
-		    "services": [{
-			    "name": "SE"
-			}]
-		},
-		{
-		    "name": "NGI DE Nagios CE2",
-		    "file_prefix": "NGIDE_Nagios_CE2", 
-		     "link": "https://ngi-de-nagios.gridka.de/nagios/cgi-bin/status.cgi?host=creamce2.goegrid.gwdg.de",
-		    "capture": true,
-		    "services": [{
-			    "name": "CE2"
-			}]
-		},
-		{
-		    "name": "NGI DE Nagios CE3",
-		    "file_prefix": "NGIDE_Nagios_CE3", 
-		     "link": "https://ngi-de-nagios.gridka.de/nagios/cgi-bin/status.cgi?host=creamce3.goegrid.gwdg.de",
-		    "capture": true,
-		    "services": [{
-			    "name": "CE3"
-			}]
-		},
-		{
-		    "name": "Midmon Nagios BDII",
-		    "file_prefix": "Midmon_Nagios_BDII", 
-		     "link": "https://midmon.egi.eu/nagios/cgi-bin/status.cgi?host=bdii.goegrid.gwdg.de",
-		    "capture": true,
-		    "services": [{
-			    "name": "BDII"
-			}]
-		},
-		{
-		    "name": "Midmon Nagios SE",
-		    "file_prefix": "Midmon_Nagios_SE", 
-		     "link": "https://midmon.egi.eu/nagios/cgi-bin/status.cgi?host=se-goegrid.gwdg.de",
-		    "capture": true,
-		    "services": [{
-			    "name": "SE"
-			}]
-		},
-		{
-		    "name": "Midmon Nagios CE2",
-		    "file_prefix": "Midmon_Nagios_CE2", 
-		     "link": "https://midmon.egi.eu/nagios/cgi-bin/status.cgi?host=creamce2.goegrid.gwdg.de",
-		    "capture": true,
-		    "services": [{
-			    "name": "CE2"
-			}]
-		},
-		{
-		    "name": "Midmon Nagios CE3",
-		    "file_prefix": "Midmon_Nagios_CE3", 
-		     "link": "https://midmon.egi.eu/nagios/cgi-bin/status.cgi?host=creamce3.goegrid.gwdg.de",
-		    "capture": true,
-		    "services": [{
-			    "name": "CE3"
-			}]
-		},
-		{
 			"name": "SSB Analysis queue last 24 hours",
 	    		"file_prefix": "ATLAS_SSB_ANALY_GOEGRID_last_24h", 
 	     		"link": "http://dashb-atlas-ssb.cern.ch/dashboard/request.py/siteviewhistorywithstatistics?columnid=562&view=Shifter%20view#time=24&use_downtimes=false&merge_colors=false&sites=one&clouds=DE&site=ANALY_GOEGRID",
@@ -369,7 +287,7 @@
 			"name": "GoeGrid Localgroupdisk Monitor",
 			"xdisplay_name": "middle",
 	    		"file_prefix": "GoeGrid_Localgroupdisk_Monitor", 
-	     		"link": "https://pilot.pleiades.uni-wuppertal.de/GOEGRID/usage",
+	     		"link": "http://localgroupdisk.pleiades.uni-wuppertal.de:8080/atlasmonitor-0.1/usage/users?diskName=GOEGRID_LOCALGROUPDISK",
 	    		"capture": true,
 	    		"services": [{
 		    		"name": "se"

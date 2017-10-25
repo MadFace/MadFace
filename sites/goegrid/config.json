@@ -10,7 +10,7 @@
 	"analysis": "data/goegrid/analysis",
 	"analysis_image_size": "384x384",
 	"keep_data_days": 60,
-	"debug_mode": 1,
+	"debug_mode": 0,
 	"xdisplay": [{
 		"name": "default",
 		"resolution": "1280x3840",
