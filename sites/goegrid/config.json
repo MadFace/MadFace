@@ -9,7 +9,7 @@
 	"thumbnail": "data/goegrid/thumbnail",
 	"analysis": "data/goegrid/analysis",
 	"analysis_image_size": "384x384",
-	"keep_data_days": 60,
+	"keep_data_days": 20,
 	"debug_mode": 0,
 	"xdisplay": [{
 		"name": "default",
@@ -66,6 +66,15 @@
 		"name": "GoeGrid PBS CPU Wall Time weekly barplot",
 		"file": "sites/goegrid/img/accounting_cpu_walltime_week_barplot.jpg"
 	    },{
+		"name": "Wall Clock consumption last 48h",
+		"file": "http://dashb-atlas-job.cern.ch/dashboard/request.py/consumptions_individual?sites=GOEGRID&sitesCat=All%20Countries&resourcetype=All&sitesSort=2&sitesCatSort=0&start=null&end=null&timeRange=last48&granularity=Hourly&generic=0&sortBy=12&series=All&type=wab"
+	    },{
+		"name": "Wall Clock consumption last 1 week",
+		"file": "http://dashb-atlas-job.cern.ch/dashboard/request.py/consumptions_individual?sites=GOEGRID&sitesCat=All%20Countries&resourcetype=All&sitesSort=2&sitesCatSort=0&start=null&end=null&timeRange=lastWeek&granularity=Hourly&generic=0&sortBy=12&series=All&type=wab"
+	    },{
+		"name": "Wall Clock consumption last 1 month",
+		"file": "http://dashb-atlas-job.cern.ch/dashboard/request.py/consumptions_individual?sites=GOEGRID&sitesCat=All%20Countries&resourcetype=All&sitesSort=2&sitesCatSort=0&start=null&end=null&timeRange=lastMonth&granularity=8%20Hours&generic=0&sortBy=12&series=All&type=wab"
+	    },{
 		"name": "Wall Clock consumption of DE Cloud last 48h",
 		"file": "http://dashb-atlas-job.cern.ch/dashboard/request.py/consumptions_individual?sites=All%20Sites&sitesCat=GERMANY&resourcetype=All&sitesSort=0&sitesCatSort=0&start=null&end=null&timeRange=last48&granularity=Hourly&generic=0&sortBy=0&series=All&type=ewa"
 	    },{
@@ -74,6 +83,15 @@
 	    },{
 		"name": "Wall Clock consumption of DE Cloud last 1 month",
 		"file": "http://dashb-atlas-job.cern.ch/dashboard/request.py/consumptions_individual?sites=All%20Sites&sitesCat=GERMANY&resourcetype=All&sitesSort=0&sitesCatSort=0&start=null&end=null&timeRange=lastMonth&granularity=Hourly&generic=0&sortBy=0&series=All&type=ewa"
+	    },{
+		"name": "Slots of Running Grid Jobs 48h",
+		"file": "http://dashb-atlas-job.cern.ch/dashboard/request.py/jobnumbers_individual?sites=GOEGRID&sitesCat=All%20Countries&resourcetype=All&sitesSort=2&sitesCatSort=0&start=null&end=null&timeRange=last48&granularity=Hourly&generic=0&sortBy=12&series=All&type=rmulticores"
+	    },{
+		"name": "Slots of Running Grid Jobs last week",
+		"file": "http://dashb-atlas-job.cern.ch/dashboard/request.py/jobnumbers_individual?sites=GOEGRID&sitesCat=All%20Countries&resourcetype=All&sitesSort=2&sitesCatSort=0&start=null&end=null&timeRange=lastWeek&granularity=Hourly&generic=0&sortBy=12&series=All&type=rmulticores"
+	    },{
+		"name": "Slots of Running Grid Jobs last 1 month",
+		"file": "http://dashb-atlas-job.cern.ch/dashboard/request.py/jobnumbers_individual?sites=GOEGRID&sitesCat=All%20Countries&resourcetype=All&sitesSort=2&sitesCatSort=0&start=null&end=null&timeRange=lastMonth&granularity=8%20Hours&generic=0&sortBy=12&series=All&type=rmulticores"
 	    },{
 		"name": "Grid Jobs last 48h",
 		"file": "http://dashb-atlas-job.cern.ch/dashboard/request.py/jobnumbers_individual?sites=GOEGRID&sitesCat=GERMANY&resourcetype=All&sitesSort=4&sitesCatSort=0&start=null&end=null&timeRange=last48&granularity=Hourly&generic=0&sortBy=12&series=All&type=t"

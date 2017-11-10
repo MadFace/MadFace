@@ -9,7 +9,7 @@
 	"thumbnail": "data/goe-ph2/thumbnail",
 	"analysis": "data/goe-ph2/analysis",
 	"analysis_image_size": "384x384",
-	"keep_data_days": 30,
+	"keep_data_days": 20,
 	"debug_mode": 0,
 	"xdisplay": [{
 		"name": "default",

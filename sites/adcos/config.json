@@ -9,7 +9,7 @@
 	"thumbnail": "data/adcos/thumbnail",
 	"analysis": "data/adcos/analysis",
 	"analysis_image_size": "384x384",
-	"keep_data_days": 30,
+	"keep_data_days": 20,
 	"debug_mode": 0,
 	"xdisplay": [{
 		"name": "default",
