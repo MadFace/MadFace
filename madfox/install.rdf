@@ -5,7 +5,7 @@
           <em:type>2</em:type>
           <em:bootstrap>true</em:bootstrap>
           <em:unpack>false</em:unpack>
-          <em:version>0.2.1</em:version>
+          <em:version>0.3.0</em:version>
           <em:name>Madfox</em:name>
           <em:description>Save Firefox tabs to image files for MadFace.</em:description>
           <em:creator/>

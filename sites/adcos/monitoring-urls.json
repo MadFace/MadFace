@@ -1794,7 +1794,7 @@
 		{
 			"name": "Atlas Computer Operations Logbook",
 	    		"file_prefix": "ATLAS_Computer_Operations_Logbook", 
-	     		"link": "https://atlas-logbook.cern.ch/elog/ATLAS+Computer+Operations+Logbook/",
+	     		"link": "https://atlas-logbook.cern.ch/elog/ATLAS+Computer+Operations+Logbook/?mode=summary",
 			"firefox_wait": 3,
 			"firefox_command": "Return",
 	    		"capture": true,
@@ -1807,7 +1807,7 @@
 		{
 			"name": "ADCoS Senior Shifter Tasks",
 	    		"file_prefix": "ADCoS_Senior_Shifter_Tasks", 
-	     		"link": "http://cbourdar.web.cern.ch/cbourdar/CompP1/",
+	     		"link": "https://adcos.web.cern.ch/adcos/ADCoS_Clock/",
 	    		"capture": false,
                     	"services": [{}]
 		},

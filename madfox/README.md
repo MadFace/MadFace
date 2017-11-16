@@ -1,8 +1,6 @@
 # Madfox Addon (for Linux)
-# Author: Gen Kawamura 
-# Date: 12.2015
 
-## Make destination
+## Make destination of browser screens
 mkdir -v /tmp/madfox.$USER
 
 ## Save and close tabs

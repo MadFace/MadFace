@@ -29,6 +29,57 @@
 	    		"services": [{
 		    		"name": "se"
 				}]
+		},
+		{
+			"name": "Argo Monitoring BDII",
+	    		"file_prefix": "ARGO_MONITORING_BDII", 
+	     		"link": "https://argo-mon2.egi.eu/nagios/cgi-bin/status.cgi?host=bdii.goegrid.gwdg.de",
+	    		"capture": true,
+	    		"services": [{
+		    		"name": "bdii"
+				}]
+		},
+		{
+			"name": "Argo Mon Monitoring SE",
+	    		"file_prefix": "ARGO_MONITORING_SE",
+	     		"link": "https://argo-mon2.egi.eu/nagios/cgi-bin/status.cgi?host=se-goegrid.gwdg.de",
+	    		"capture": true,
+	    		"services": [{
+		    		"name": "se"
+				}]
+		},
+		{
+			"name": "Argo Monitoring CE1",
+	    		"file_prefix": "ARGO_MONITORING_CE1", 
+	     		"link": "https://argo-mon2.egi.eu/nagios/cgi-bin/status.cgi?host=creamce.goegrid.gwdg.de",
+	    		"capture": true,
+	    		"services": [{
+		    		"name": "creamce"
+			        },{
+		    		"name": "pbs"
+				}]
+		},
+		{
+			"name": "Argo Monitoring CE2",
+	    		"file_prefix": "ARGO_MONITORING_CE2", 
+	     		"link": "https://argo-mon2.egi.eu/nagios/cgi-bin/status.cgi?host=creamce2.goegrid.gwdg.de",
+	    		"capture": true,
+	    		"services": [{ 
+				"name": "creamce2"
+			        },{
+		    		"name": "pbs"
+				}]
+		},
+		{
+			"name": "Argo Monitoring CE3",
+	    		"file_prefix": "ARGO_MONITORING_CE3", 
+	     		"link": "https://argo-mon2.egi.eu/nagios/cgi-bin/status.cgi?host=creamce3.goegrid.gwdg.de",
+	    		"capture": true,
+	    		"services": [{
+		    		"name": "creamce3"
+			        },{
+		    		"name": "pbs"
+				}]
 		}
 		]
 	}, 

@@ -41,5 +41,7 @@ rimage
  (this is for madfox, because madfox is an unsigned package for now)
  about:config --> xpinstall.signatures.required --> false
 
+ max_script_run_time
+
  Install Skip Cert Error addon
 

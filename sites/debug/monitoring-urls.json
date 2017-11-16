@@ -1,0 +1,139 @@
+[{
+	      "name": "Critical Line",
+	      "text": "The most critical monitoring pages",
+	      "level": "Critical",
+	      "urls": [
+		{
+			"name": "SSB Analysis queue last 24 hours",
+	    		"file_prefix": "ATLAS_SSB_ANALY_GOEGRID_last_24h", 
+	     		"link": "http://dashb-atlas-ssb.cern.ch/dashboard/request.py/siteviewhistorywithstatistics?columnid=562&view=Shifter%20view#time=24&use_downtimes=false&merge_colors=false&sites=one&clouds=DE&site=ANALY_GOEGRID",
+	    		"capture": true,
+	    		"services": [{
+		    		"name": "se"
+				}]
+		}, 
+		{
+			"name": "SSB Production queue last 24 hours",
+	    		"file_prefix": "ATLAS_SSB_GOEGRID_last_24h", 
+	     		"link": "http://dashb-atlas-ssb.cern.ch/dashboard/request.py/siteviewhistorywithstatistics?columnid=562&view=Shifter%20view#time=24&use_downtimes=false&merge_colors=false&sites=one&clouds=DE&site=GoeGrid",
+	    		"capture": true,
+	    		"services": [{
+		    		"name": "se"
+				}]
+		}, 
+		{
+			"name": "SSB Mcore queue last 24 hours",
+	    		"file_prefix": "ATLAS_SSB_GOEGRID_MCORE_last_24h", 
+	     		"link": "http://dashb-atlas-ssb.cern.ch/dashboard/request.py/siteviewhistorywithstatistics?columnid=562&view=Shifter%20view#time=24&use_downtimes=false&merge_colors=false&sites=one&clouds=DE&site=GoeGrid_MCORE",
+	    		"capture": true,
+	    		"services": [{
+		    		"name": "se"
+				}]
+		},
+		{
+			"name": "Argo Monitoring BDII",
+	    		"file_prefix": "ARGO_MONITORING_BDII", 
+	     		"link": "https://argo-mon2.egi.eu/nagios/cgi-bin/status.cgi?host=bdii.goegrid.gwdg.de",
+	    		"capture": true,
+	    		"services": [{
+		    		"name": "bdii"
+				}]
+		},
+		{
+			"name": "Argo Mon Monitoring SE",
+	    		"file_prefix": "ARGO_MONITORING_SE",
+	     		"link": "https://argo-mon2.egi.eu/nagios/cgi-bin/status.cgi?host=se-goegrid.gwdg.de",
+	    		"capture": true,
+	    		"services": [{
+		    		"name": "se"
+				}]
+		},
+		{
+			"name": "Argo Monitoring CE1",
+	    		"file_prefix": "ARGO_MONITORING_CE1", 
+	     		"link": "https://argo-mon2.egi.eu/nagios/cgi-bin/status.cgi?host=creamce.goegrid.gwdg.de",
+	    		"capture": true,
+	    		"services": [{
+		    		"name": "creamce"
+			        },{
+		    		"name": "pbs"
+				}]
+		},
+		{
+			"name": "Argo Monitoring CE2",
+	    		"file_prefix": "ARGO_MONITORING_CE2", 
+	     		"link": "https://argo-mon2.egi.eu/nagios/cgi-bin/status.cgi?host=creamce2.goegrid.gwdg.de",
+	    		"capture": true,
+	    		"services": [{ 
+				"name": "creamce2"
+			        },{
+		    		"name": "pbs"
+				}]
+		},
+		{
+			"name": "Argo Monitoring CE3",
+	    		"file_prefix": "ARGO_MONITORING_CE3", 
+	     		"link": "https://argo-mon2.egi.eu/nagios/cgi-bin/status.cgi?host=creamce3.goegrid.gwdg.de",
+	    		"capture": true,
+	    		"services": [{
+		    		"name": "creamce3"
+			        },{
+		    		"name": "pbs"
+				}]
+		}
+		]
+	}, 
+	
+
+
+	{
+		"name": "Error Line",
+		"text": "Critical monitoring pages",
+		"level": "Error",
+		"urls": [
+		{
+			"name": "Hammer Cloud Analsys test last 6 hours",
+	    		"file_prefix": "HC_test_ANALY_GOEGRID_last_6h", 
+	     		"link": "http://bigpanda.cern.ch/jobs/?computingsite=ANALY_GOEGRID&hours=6&display_limit=100&produsername=gangarbt",
+	    		"capture": true,
+	    		"services": [{
+		    		"name": "se"
+				}]
+		}
+		]
+	},
+
+
+	{
+		"name": "Warning Line",
+		"text": "Need to check them",
+		"level": "Warning",
+		"urls": [
+		{
+			"name": "Rucio Web UI GoeGrid RSE Usage",
+			"xdisplay_name": "middle",
+	    		"file_prefix": "Rucio_Web_UI_GoeGrid_RSE_Usage", 
+	     		"link": "https://rucio-ui.cern.ch/rse_usage?rses=GOEGRID_DATADISK,GOEGRID_DET-INDET,GOEGRID_LOCALGROUPDISK,GOEGRID_PHYS-EXOTICS,GOEGRID_PHYS-HIGGS,GOEGRID_SCRATCHDISK",
+	    		"capture": true,
+	    		"services": [{
+		    		"name": "se"
+				}]
+		}
+		]
+	},
+
+
+	{
+		"name": "Controller",
+		"text": "",
+		"level": null,
+		"urls": [{
+				"name": "GoeGrid GOCDB",
+	    			"file_prefix": null, 
+	     			"link": "https://goc.egi.eu/portal/index.php?Page_Type=Site&id=248",
+	    			"capture": false,
+	    			"services": []
+			}]
+	}
+
+]

@@ -129,8 +129,8 @@ open_firefox_tabs(){
 
 
 run_madfox(){
-    ## Run Madfox
-    [ ! -e $MADFOX_TMP_DIR ] && mkdir -v $MADFOX_TMP_DIR
+    ## Run MadFox
+    #[ ! -e $MADFOX_TMP_DIR ] && mkdir -v $MADFOX_TMP_DIR
     INFO "Pushed Shift+Ctrl+s for Madfox"
     xdotool key Shift+Ctrl+s
 
@@ -139,6 +139,12 @@ run_madfox(){
     do
 	WAIT $WAIT_MADFOX
 	check_firefox_process && INFO "Firefox is not running!" && return 0
+
+	## Run MadFox again
+	if [ $num -eq $(echo "$MAX_NUM_WAIT_MADFOX / 2"|bc) ] && ! ls $MADFOX_TMP_DIR/*.png &> /dev/null; then
+	    INFO "Pushed Shift+Ctrl+s for Madfox"
+	    xdotool key Shift+Ctrl+s
+	fi
     done
     return 1
 }

@@ -55,11 +55,25 @@ var tab_utils = require("sdk/tabs/utils");
 var { modelFor } = require("sdk/model/core");
 var { viewFor } = require("sdk/view/core");
 
+const { Cc, Ci, Cu } = require('chrome');
+const { OS } = Cu.import("resource://gre/modules/osfile.jsm");
+const { Task } = Cu.import("resource://gre/modules/Task.jsm");
+
+
 function captureTabs(closeTabs){
     var i = 0;
+    var dirname = "/tmp/madfox." + env.USER;
+    var FileUtils = Cu.import("resource://gre/modules/FileUtils.jsm").FileUtils
+    var nsifile   = new FileUtils.File( dirname )
+    if (! nsifile.exists()){
+      console.error("Making output dir: [" + dirname + "]");
+      nsifile.create(1, 0755);
+    }
+
     for (let tab of tabs){
 	// Capturing
-	console.log("Tab: " + i + " Capturing [" + tab.url + "]");
+        var output_png = dirname + "/" + i + ".png";
+	console.error("Tab: " + i + " Capturing [" + tab.url + "] --> [" + output_png + "]");
 
 	// Save current tab
 	/*
@@ -81,7 +95,7 @@ function captureTabs(closeTabs){
 	  https://developer.mozilla.org/en-US/Add-ons/Code_snippets/Canvas#Saving_a_canvas_image_to_a_file
 	 */
 	var canvas = drawCanvas(window);
-	saveCanvas(canvas, "/tmp/madfox." + env.USER + "/" + i + ".png");
+	saveCanvas(canvas, output_png);
 
 	i++;
     }
@@ -112,17 +126,18 @@ function drawCanvas(win) {
     var width = html.scrollWidth;
     var height = html.scrollHeight;
     if (height == 0) {
-	console.log("win.innerHeight = " + win.innerHeight);
+	console.error("win.innerHeight = " + win.innerHeight);
 	height = win.innerHeight;
     }
-    console.log("height = " + height + ", width = " + width);
+    console.error("height = " + height + ", width = " + width);
 
     var left = 0, top = 0;
 
     /*
       Create a new canvas element
     */
-    var canvas = win.document.createElementNS("http://www.w3.org/1999/xhtml", "html:canvas");
+    //var canvas = win.document.createElementNS("http://www.w3.org/1999/xhtml", "html:canvas");
+    var canvas = win.document.createElement('canvas');
     canvas.style.width = canvas.style.maxwidth = String(width) + "px";
     canvas.style.height = canvas.style.maxheight = String(height) + "px";
     canvas.width = width;
@@ -147,28 +162,33 @@ function drawCanvas(win) {
   Saving canvas
   Ref: http://stackoverflow.com/questions/31502231/firefox-addon-expose-chrome-function-to-website
  */
-const { Cc, Ci, Cu } = require('chrome');
-const { OS } = Cu.import("resource://gre/modules/osfile.jsm");
-const { Task } = Cu.import("resource://gre/modules/Task.jsm");
 
-function saveCanvas(canvas, name) {
-    var path = OS.Path.join(OS.Constants.Path.desktopDir, name);
-    console.log("Output = " + path);
-    return Task.spawn(function *() {
-	    var reader = Cc['@mozilla.org/files/filereader;1'].createInstance(Ci.nsIDOMFileReader);
-	    var blob = yield new Promise(accept => canvas.toBlob(accept));
-	    reader.readAsArrayBuffer(blob);
-	    yield new Promise(accept => { reader.onloadend = accept });
-	    return yield OS.File.writeAtomic(path, new Uint8Array(reader.result));
-	});
-}
 
 function expose(event) {
     Cu.exportFunction(saveCanvas, event.subject, {defineAs: "saveCanvas"});
 }
 
+
+function saveCanvas(canvas, name) {
+    var path = OS.Path.join(OS.Constants.Path.desktopDir, name);
+
+    return Task.spawn(function *() {
+        var reader;
+        try {
+          Cu.importGlobalProperties(['FileReader']);
+          reader = new FileReader();
+        } catch (e) {
+          reader = Cc['@mozilla.org/files/filereader;1'].createInstance(Ci.nsIDOMFileReader);
+        }
+        var blob = yield new Promise(accept => canvas.toBlob(accept));
+        reader.readAsArrayBuffer(blob);
+        yield new Promise(accept => { reader.onloadend = accept });
+        return yield OS.File.writeAtomic(path, new Uint8Array(reader.result));
+    });
+}
+
+
 exports.main = function(options, callbacks) {
     var events = require("sdk/system/events");
     events.on("content-document-global-created", expose);
 };
-
